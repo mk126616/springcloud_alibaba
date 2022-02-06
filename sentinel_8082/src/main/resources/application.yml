@@ -1,0 +1,16 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: sentinel_client
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 192.168.62.130:8858
+        port: 8719   #sentinel服务监控当前应用使用的端口
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

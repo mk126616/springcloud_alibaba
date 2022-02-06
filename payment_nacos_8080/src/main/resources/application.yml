@@ -1,0 +1,34 @@
+server:
+  port: 8080
+#mysql数据库配置
+spring:
+  application:
+    #    应用的别名
+    name: payment-service
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.62.130:3306/mk_test_database?useUnicode=true&characterEncoding=utf-8&&userSSl=false
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    maxCreateTaskCount: 10
+    initialize: true
+#nacos配置
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.62.130:8848
+#暴露服务注册中心监控服务使用的端点,不开启无法被调用
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
+#mybatis
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:com/mk/mapper/*Mapper.xml
+
+

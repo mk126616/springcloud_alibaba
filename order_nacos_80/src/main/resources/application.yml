@@ -1,0 +1,17 @@
+server:
+  port: 80
+spring:
+  application:
+    name: order-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.62.130:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+#自定义服务访问路径配置
+server-url:
+  payment-server: http://payment-service

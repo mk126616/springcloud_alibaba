@@ -2,12 +2,19 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springcloud_alibaba" />
+        <module name="nacos_config_client_8081" />
+        <module name="payment_nacos_8080" />
+        <module name="sentinel_8082" />
+        <module name="order_nacos_80" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common_resource" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
